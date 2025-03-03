@@ -1,5 +1,9 @@
 
+import 'package:adminapp/category.dart';
 import 'package:adminapp/distrit.dart';
+import 'package:adminapp/place.dart';
+import 'package:adminapp/shopverification.dart';
+import 'package:adminapp/subcategory.dart';
 import 'package:flutter/material.dart';
 
 class DashBoard extends StatefulWidget {
@@ -15,16 +19,28 @@ class _DashBoardState extends State<DashBoard> {
   List<String> pageName = [
     'Dashboard',
     'District',
+    'Place',
+    'Category',
+    'Subcategories',
+    'Shop Verification',
   ];
 
   List<IconData> pageIcon = [
     Icons.home,
     Icons.location_city,
+    Icons.place,
+    Icons.category,
+    Icons.subdirectory_arrow_right,
+    Icons.check_circle_outline,
   ];
 
   List<Widget> pageContent = [
     Center(child: Text("Dashboard Content", style: TextStyle(fontSize: 20))), // Replace with actual dashboard content
     District(),
+    Place(),
+    Category(),
+    SubCategory(),
+    VerifyShops(),
   ];
 
   @override
